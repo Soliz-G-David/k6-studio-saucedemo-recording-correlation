@@ -1,0 +1,23 @@
+[
+  {
+    "username": "standard_user",
+    "password": "secret_sauce",
+    "firstName": "David",
+    "lastName": "Soliz Garcia",
+    "postalCode": "1234"
+  },
+  {
+    "username": "problem_user",
+    "password": "secret_sauce",
+    "firstName": "Ana",
+    "lastName": "Perez",
+    "postalCode": "5678"
+  },
+  {
+    "username": "visual_user",
+    "password": "secret_sauce",
+    "firstName": "Luis",
+    "lastName": "Rojas",
+    "postalCode": "9012"
+  }
+]

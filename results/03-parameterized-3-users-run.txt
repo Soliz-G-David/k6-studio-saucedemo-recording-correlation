@@ -1,0 +1,93 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: scripts/03-parameterized-correlated.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 3 max VUs, 10m30s max duration (incl. graceful stop):
+              * default: 3 iterations shared among 3 VUs (maxDuration: 10m0s, gracefulStop: 30s)
+
+time="2026-11-14T22:10:45-04:00" level=info msg="Usuario: standard_user - David" source=console
+time="2026-11-14T22:10:45-04:00" level=info msg="Usuario: visual_user - Luis" source=console
+time="2026-11-14T22:10:45-04:00" level=info msg="Usuario: problem_user - Ana" source=console
+
+running (00m01.0s), 3/3 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 3 VUs  00m01.0s/10m0s  0/3 shared iters
+
+running (00m02.0s), 3/3 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 3 VUs  00m02.0s/10m0s  0/3 shared iters
+
+running (00m03.0s), 3/3 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 3 VUs  00m03.0s/10m0s  0/3 shared iters
+
+running (00m04.0s), 3/3 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 3 VUs  00m04.0s/10m0s  0/3 shared iters
+
+running (00m05.0s), 3/3 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 3 VUs  00m05.0s/10m0s  0/3 shared iters
+
+
+  █ THRESHOLDS 
+
+    http_req_duration
+    ✓ 'p(95)<800' p(95)=296.59ms
+    ✓ 'p(99)<1000' p(99)=331.83ms
+
+    http_req_failed
+    ✓ 'rate<0.01' rate=0.00%
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 60      10.406566/s
+    checks_succeeded...: 100.00% 60 out of 60
+    checks_failed......: 0.00%   0 out of 60
+
+    ✓ / status 200
+    ✓ CSS encontrado
+    ✓ JS encontrado
+    ✓ /assets/index-aSZoiKGF.css status 200
+    ✓ /manifest.json status 200
+    ✓ /favicon.ico status 200
+    ✓ /assets/index-DnLqFcJI.js status 200
+    ✓ Imagenes encontradas
+    ✓ /assets/bike-light-1200x1500-DxcZRFOA.jpg status 200
+    ✓ /assets/bolt-shirt-1200x1500-mR0ldpVS.jpg status 200
+    ✓ /assets/red-onesie-1200x1500-BrSuq0ic.jpg status 200
+    ✓ /assets/red-tatt-1200x1500-E-qp6aYf.jpg status 200
+    ✓ /assets/sauce-backpack-1200x1500-CjRW-Djj.jpg status 200
+    ✓ /assets/sauce-pullover-1200x1500-BfbI-PSd.jpg status 200
+    ✓ Checkmark encontrado
+    ✓ /assets/checkmark-VLWQafip.png status 200
+    ✓ Recibo encontrado
+    ✓ /assets/OrderReceipt-DkepNh28.js status 200
+    ✓ Libreria PDF encontrada
+    ✓ /assets/react-pdf.browser-DvoXys0j.js status 200
+
+    HTTP
+    http_req_duration..............: avg=105.44ms min=69.04ms med=78.39ms max=337.49ms p(90)=193.57ms p(95)=296.59ms
+      { expected_response:true }...: avg=105.44ms min=69.04ms med=78.39ms max=337.49ms p(90)=193.57ms p(95)=296.59ms
+    http_req_failed................: 0.00%  0 out of 42
+    http_reqs......................: 42     7.284596/s
+
+    EXECUTION
+    iteration_duration.............: avg=5.71s    min=5.62s   med=5.75s   max=5.76s    p(90)=5.76s    p(95)=5.76s   
+    iterations.....................: 3      0.520328/s
+    vus............................: 3      min=3       max=3
+    vus_max........................: 3      min=3       max=3
+
+    NETWORK
+    data_received..................: 6.6 MB 1.1 MB/s
+    data_sent......................: 22 kB  3.9 kB/s
+
+
+
+
+running (00m05.8s), 0/3 VUs, 3 complete and 0 interrupted iterations
+default ✓ [ 100% ] 3 VUs  00m05.8s/10m0s  3/3 shared iters
