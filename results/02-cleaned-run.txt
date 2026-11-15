@@ -1,0 +1,87 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: scripts/02-cleaned.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 1 max VUs, 10m30s max duration (incl. graceful stop):
+              * default: 1 iterations shared among 1 VUs (maxDuration: 10m0s, gracefulStop: 30s)
+
+
+running (00m01.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m01.0s/10m0s  0/1 shared iters
+
+running (00m02.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m02.0s/10m0s  0/1 shared iters
+
+running (00m03.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m03.0s/10m0s  0/1 shared iters
+
+running (00m04.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m04.0s/10m0s  0/1 shared iters
+
+running (00m05.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m05.0s/10m0s  0/1 shared iters
+
+running (00m06.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m06.0s/10m0s  0/1 shared iters
+
+
+  █ THRESHOLDS 
+
+    http_req_duration
+    ✓ 'p(95)<800' p(95)=309.05ms
+    ✓ 'p(99)<1000' p(99)=451.02ms
+
+    http_req_failed
+    ✓ 'rate<0.01' rate=0.00%
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 14      2.329533/s
+    checks_succeeded...: 100.00% 14 out of 14
+    checks_failed......: 0.00%   0 out of 14
+
+    ✓ home status 200
+    ✓ /assets/index-aSZoiKGF.css status 200
+    ✓ /assets/index-DnLqFcJI.js status 200
+    ✓ /manifest.json status 200
+    ✓ /favicon.ico status 200
+    ✓ /assets/sauce-backpack-1200x1500-CjRW-Djj.jpg status 200
+    ✓ /assets/bike-light-1200x1500-DxcZRFOA.jpg status 200
+    ✓ /assets/bolt-shirt-1200x1500-mR0ldpVS.jpg status 200
+    ✓ /assets/sauce-pullover-1200x1500-BfbI-PSd.jpg status 200
+    ✓ /assets/red-onesie-1200x1500-BrSuq0ic.jpg status 200
+    ✓ /assets/red-tatt-1200x1500-E-qp6aYf.jpg status 200
+    ✓ /assets/checkmark-VLWQafip.png status 200
+    ✓ /assets/OrderReceipt-DkepNh28.js status 200
+    ✓ /assets/react-pdf.browser-DvoXys0j.js status 200
+
+    HTTP
+    http_req_duration..............: avg=127.59ms min=73.93ms med=80.96ms max=486.51ms p(90)=207.5ms p(95)=309.05ms
+      { expected_response:true }...: avg=127.59ms min=73.93ms med=80.96ms max=486.51ms p(90)=207.5ms p(95)=309.05ms
+    http_req_failed................: 0.00%  0 out of 14
+    http_reqs......................: 14     2.329533/s
+
+    EXECUTION
+    iteration_duration.............: avg=6s       min=6s      med=6s      max=6s       p(90)=6s      p(95)=6s      
+    iterations.....................: 1      0.166395/s
+    vus............................: 1      min=1       max=1
+    vus_max........................: 1      min=1       max=1
+
+    NETWORK
+    data_received..................: 2.2 MB 365 kB/s
+    data_sent......................: 7.4 kB 1.2 kB/s
+
+
+
+
+running (00m06.0s), 0/1 VUs, 1 complete and 0 interrupted iterations
+default ✓ [ 100% ] 1 VUs  00m06.0s/10m0s  1/1 shared iters
